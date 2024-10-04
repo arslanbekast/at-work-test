@@ -1,0 +1,35 @@
+.button {
+  cursor: pointer;
+  user-select: none;
+
+  padding: 12px 42px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.86px;
+  color: var(--color-06);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  background-color: var(--color-01);
+  border: none;
+  border-radius: 50px;
+
+  transition: all ease-out 0.3s;
+
+  &:hover {
+    color: var(--color-02);
+    background-color: var(--color-05);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (width <= 375px) {
+    width: 100%;
+    font-size: 14px;
+    line-height: 19.12px;
+  }
+}
