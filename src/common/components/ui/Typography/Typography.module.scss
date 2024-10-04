@@ -1,0 +1,65 @@
+.typography {
+  margin: 0;
+}
+
+.title {
+  composes: typography;
+  font-size: 24px;
+  line-height: 32.78px;
+}
+
+.headline {
+  composes: typography;
+  font-size: 20px;
+  line-height: 27.32px;
+}
+
+.text1 {
+  composes: typography;
+  font-size: 18px;
+  line-height: 24.59px;
+}
+
+.text2 {
+  composes: typography;
+  font-size: 16px;
+  line-height: 21.86px;
+}
+
+.caption {
+  composes: typography;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.12px;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+@media (width <= 375px) {
+  .headline {
+    font-size: 18px;
+    line-height: 24.59px;
+  }
+
+  .text1 {
+    font-size: 16px;
+    line-height: 21.86px;
+  }
+
+  .text2 {
+    font-size: 14px;
+    line-height: 19.12px;
+  }
+
+  .caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13.66px;
+  }
+}
