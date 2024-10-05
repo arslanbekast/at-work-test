@@ -1,0 +1,14 @@
+.header {
+  padding: 18px 0;
+  background-color: var(--color-06);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
