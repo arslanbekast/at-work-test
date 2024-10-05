@@ -1,0 +1,17 @@
+.headerRight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .iconsWrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .userInfo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
