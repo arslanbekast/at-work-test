@@ -1,0 +1,78 @@
+.userCard {
+  display: flex;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 360px;
+  padding: 24px;
+
+  background-color: var(--color-06);
+  border-radius: 16px;
+
+  .image {
+    overflow: hidden;
+    width: 112px;
+    height: 120px;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .usernameWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+
+      .username {
+        color: var(--color-accent);
+      }
+
+      .dropdownBtn {
+        all: unset;
+
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+
+        span {
+          width: 4px;
+          height: 4px;
+
+          background-color: var(--color-01);
+          border-radius: 4px;
+
+          transition: background-color ease-out 0.3s;
+        }
+
+        &:hover span {
+          background-color: var(--color-accent);
+        }
+      }
+    }
+
+    .companyName {
+      flex: 1 1 auto;
+      color: var(--color-02);
+    }
+
+    .city {
+      color: var(--color-03);
+    }
+  }
+}
