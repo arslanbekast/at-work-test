@@ -1,0 +1,20 @@
+.logoWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  img {
+    width: 24px;
+  }
+
+  .companyName {
+    font-family: var(--font-family-secondary), sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-logo);
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
