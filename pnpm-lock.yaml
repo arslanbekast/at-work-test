@@ -11,6 +11,9 @@ dependencies:
   '@fontsource-variable/manrope':
     specifier: ^5.1.0
     version: 5.1.0
+  '@hookform/resolvers':
+    specifier: ^3.9.0
+    version: 3.9.0(react-hook-form@7.53.0)
   '@reduxjs/toolkit':
     specifier: ^2.2.7
     version: 2.2.7(react-redux@9.1.2)(react@18.3.1)
@@ -32,6 +35,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.26.2
     version: 6.26.2(react-dom@18.3.1)(react@18.3.1)
+  zod:
+    specifier: ^3.23.8
+    version: 3.23.8
 
 devDependencies:
   '@eslint/js':
@@ -427,6 +433,14 @@ packages:
 
   /@fontsource-variable/manrope@5.1.0:
     resolution: {integrity: sha512-QjvtYRsCM0UTiOlBs21nNuFpHVcsiBwQuHGIFCTMsQgJvl0jdi4LYiD9sYQ11RplaeZcN6/Z8ynE9Spicqkv0w==}
+    dev: false
+
+  /@hookform/resolvers@3.9.0(react-hook-form@7.53.0):
+    resolution: {integrity: sha512-bU0Gr4EepJ/EQsH/IwEzYLsT/PEj5C0ynLQ4m+GSHS+xKH4TfSelhluTgOaoc4kA5s7eCsQbM4wvZLzELmWzUg==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.53.0(react@18.3.1)
     dev: false
 
   /@humanwhocodes/module-importer@1.0.1:
@@ -3874,3 +3888,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+    dev: false
