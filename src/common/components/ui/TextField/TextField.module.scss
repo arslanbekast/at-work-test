@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 420px;
+
+    .textField {
+      width: 100%;
+      max-width: 420px;
+      padding: 10px 16px;
+
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-02);
+
+      background-color: var(--color-06);
+      border: 2px solid var(--color-04);
+      border-radius: 50px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.error {
+        border: 2px solid var(--color-error-border);
+      }
+    }
+
+    .clearButton {
+      cursor: pointer;
+
+      position: absolute;
+      top: 50%;
+      right: 9px;
+      transform: translateY(-50%);
+
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      padding: 0;
+
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  .errorMessage {
+    font-size: 12px;
+    font-weight: 400;
+    color: #dc3545;
+  }
+}
