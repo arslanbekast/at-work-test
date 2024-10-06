@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   gap: 32px 40px;
 }
+
+@media (width <= 792px) {
+  .usersList {
+    gap: 19px;
+  }
+}
