@@ -9,3 +9,10 @@
     gap: 19px;
   }
 }
+
+@media (width <= 480px) {
+  .usersList {
+    gap: 10px;
+    justify-content: space-between;
+  }
+}
