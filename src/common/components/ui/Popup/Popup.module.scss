@@ -17,6 +17,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  width: 310px;
   padding: 40px;
 
   background-color: var(--color-06);
@@ -72,5 +73,16 @@
   to {
     transform: translate(-50%, -45%);
     opacity: 0;
+  }
+}
+
+@media (width <= 480px) {
+  .popup {
+    width: 271px;
+    padding: 32px;
+  }
+
+  .messageContainer {
+    gap: 16px;
   }
 }
