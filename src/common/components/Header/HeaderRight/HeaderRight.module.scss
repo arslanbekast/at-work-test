@@ -2,16 +2,37 @@
   display: flex;
   gap: 20px;
   align-items: center;
+}
 
-  .iconsWrapper {
-    display: flex;
-    gap: 4px;
-    align-items: center;
+.iconsWrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 20px;
+  height: 20px;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+
+@media (width <= 375px) {
+  .iconsWrapper,
+  .username {
+    display: none;
   }
 
-  .userInfo {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+  .userAvatar {
+    width: 28px;
+    height: 28px;
   }
 }
