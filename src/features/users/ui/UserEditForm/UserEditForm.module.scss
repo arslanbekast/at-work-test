@@ -1,0 +1,13 @@
+.textFields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (width <= 480px) {
+  .textFields {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
