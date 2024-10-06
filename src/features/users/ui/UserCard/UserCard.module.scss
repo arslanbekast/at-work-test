@@ -16,8 +16,10 @@
     border-radius: 8px;
 
     img {
-      width: 100%;
-      object-fit: contain;
+      width: 112px;
+      height: 120px;
+      object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -34,35 +36,7 @@
 
       .username {
         color: var(--color-accent);
-      }
-
-      .dropdownBtn {
-        all: unset;
-
-        cursor: pointer;
-
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        align-items: center;
-
-        box-sizing: border-box;
-        width: 16px;
-        height: 16px;
-
-        span {
-          width: 4px;
-          height: 4px;
-
-          background-color: var(--color-01);
-          border-radius: 4px;
-
-          transition: background-color ease-out 0.3s;
-        }
-
-        &:hover span {
-          background-color: var(--color-accent);
-        }
+        word-break: break-all;
       }
     }
 
@@ -74,5 +48,52 @@
     .city {
       color: var(--color-03);
     }
+  }
+}
+
+.archive {
+  .image img {
+    filter: grayscale(100%);
+  }
+
+  .info .usernameWrapper .username {
+    color: var(--color-02);
+  }
+
+  .info .companyName {
+    color: var(--color-03);
+  }
+
+  .info .city {
+    color: var(--color-04);
+  }
+}
+
+@media (width <= 772px) {
+  .userCard {
+    max-width: 320px;
+    padding: 16px;
+  }
+}
+
+@media (width <= 480px) {
+  .userCard {
+    flex-direction: column;
+    max-width: 162px;
+    height: 242px;
+
+    .image {
+      width: 130px;
+
+      img {
+        width: 130px;
+      }
+    }
+  }
+}
+
+@media (width <= 375px) {
+  .archiveDropdownItem {
+    font-size: 16px;
   }
 }
