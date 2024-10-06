@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { useAppDispatch } from '@/common/hooks/useAppDispatch'
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Имя не должно быть пустым'),
+  name: z.string().min(1, 'Имя не должно быть пустым'),
   username: z.string().min(1, 'Никнейм не должен быть пустым'),
   email: z.string().min(1, 'Email не должен быть пустым').email('Не валидный email'),
   city: z.string().min(1, 'Город не должен быть пустым'),
