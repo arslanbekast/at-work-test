@@ -1,7 +1,8 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
 
   .inputWrapper {
     position: relative;
@@ -16,7 +17,7 @@
 
       font-size: 16px;
       font-weight: 500;
-      color: var(--color-02);
+      color: var(--color-01);
 
       background-color: var(--color-06);
       border: 2px solid var(--color-04);
@@ -53,5 +54,11 @@
     font-size: 12px;
     font-weight: 400;
     color: #dc3545;
+  }
+}
+
+@media (width <= 480px) {
+  .inputWrapper .textField {
+    font-size: 14px;
   }
 }

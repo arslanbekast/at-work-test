@@ -1,7 +1,6 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef, useState } from 'react'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import s from './TextField.module.scss'
 import { Typography } from '@/common/components/ui/Typography/Typography'
-import { ClearIcon } from '@/assets/icons/ClearIcon'
 
 type TextFieldProps = {
   error?: string
@@ -9,21 +8,7 @@ type TextFieldProps = {
 } & ComponentPropsWithoutRef<'input'>
 
 export const TextField = forwardRef<ElementRef<'input'>, TextFieldProps>(
-  ({ error, label, placeholder, onChange, type = 'text', ...rest }, ref) => {
-    const [value, setValue] = useState<string>('')
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(event.target.value)
-    }
-
-    const handleClear = () => {
-      setValue('')
-    }
-    const clearButton = value && (
-      <button className={s.clearButton} type={'button'} onClick={handleClear}>
-        <ClearIcon />
-      </button>
-    )
-
+  ({ error, label, placeholder, type = 'text', ...rest }, ref) => {
     return (
       <div className={s.wrapper}>
         <label>
@@ -35,13 +20,10 @@ export const TextField = forwardRef<ElementRef<'input'>, TextFieldProps>(
           <input
             placeholder={placeholder}
             type={type}
-            value={value}
-            onChange={handleInputChange}
             {...rest}
             ref={ref}
             className={`${s.textField} ${error && s.error}`}
           />
-          {clearButton}
         </div>
         {error && <span className={s.errorMessage}>{error}</span>}
       </div>
