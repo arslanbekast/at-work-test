@@ -1,5 +1,6 @@
 import s from './Dropdown.module.scss'
 import { ReactNode, useEffect, useRef } from 'react'
+import { DropdownTriggerIcon } from '@/assets/icons/DropdownTriggerIcon'
 
 type DropdownProps = {
   items: ReactNode[]
@@ -33,9 +34,7 @@ export const Dropdown = ({ items, open, setOpen }: DropdownProps) => {
           setOpen(!open)
         }}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <DropdownTriggerIcon />
       </button>
       {open && (
         <div className={s.dropdown}>

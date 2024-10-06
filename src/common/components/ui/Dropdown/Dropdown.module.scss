@@ -47,24 +47,39 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2px;
   align-items: center;
+  justify-content: center;
 
   box-sizing: border-box;
   width: 16px;
   height: 16px;
 
-  span {
-    width: 4px;
-    height: 4px;
+  transition: color ease-out 0.3s;
 
-    background-color: var(--color-01);
-    border-radius: 4px;
-
-    transition: background-color ease-out 0.3s;
+  &:hover {
+    color: var(--color-accent);
   }
 
-  &:hover span {
-    background-color: var(--color-accent);
+  svg {
+    width: 4px;
+    height: 16px;
+  }
+}
+
+@media (width <= 480px) {
+  .dropdownBtn {
+    width: 10px;
+    height: 10px;
+
+    svg {
+      width: 2.5px;
+      height: 10px;
+    }
+  }
+
+  .dropdown {
+    top: 14px;
+    right: -4px;
+    width: 160px;
   }
 }
