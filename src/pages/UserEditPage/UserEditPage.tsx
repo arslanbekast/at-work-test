@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { selectUserById } from '@/features/users/model/users.selectors'
 import { RootState } from '@/app/store'
+import { Zoom } from 'react-awesome-reveal'
 
 const categories = [
   { id: 1, value: 'Данные профиля', active: true },
@@ -34,31 +35,33 @@ export const UserEditPage = () => {
   }, [user, navigate])
 
   return (
-    <div className={s.userEditPage}>
-      <div className={s.goBack}>
-        <Link to={'/users/'} className={s.goBackLink}>
-          <ArrowLeftIcon />
-          <Typography as={'span'} variant={'headline'} weight={'semibold'}>
-            Назад
-          </Typography>
-        </Link>
-      </div>
-      <div className={s.wrapper}>
-        <div className={s.categoryWrapper}>
-          <div className={s.image}>
-            <img src={userPhoto} alt="User photo" />
+    <Zoom cascade={true} damping={0.05}>
+      <div className={s.userEditPage}>
+        <div className={s.goBack}>
+          <Link to={'/users/'} className={s.goBackLink}>
+            <ArrowLeftIcon />
+            <Typography as={'span'} variant={'headline'} weight={'semibold'}>
+              Назад
+            </Typography>
+          </Link>
+        </div>
+        <div className={s.wrapper}>
+          <div className={s.categoryWrapper}>
+            <div className={s.image}>
+              <img src={userPhoto} alt="User photo" />
+            </div>
+            <div className={s.categories}>
+              {categories.map(c => (
+                <Category key={c.id} value={c.value} active={c.active} />
+              ))}
+            </div>
           </div>
-          <div className={s.categories}>
-            {categories.map(c => (
-              <Category key={c.id} value={c.value} active={c.active} />
-            ))}
+          <div className={s.settings}>
+            <Title title={'Данные профиля'} className={s.title} />
+            <UserEditForm user={user} />
           </div>
         </div>
-        <div className={s.settings}>
-          <Title title={'Данные профиля'} className={s.title} />
-          <UserEditForm user={user} />
-        </div>
       </div>
-    </div>
+    </Zoom>
   )
 }
